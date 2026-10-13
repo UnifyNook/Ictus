@@ -15,6 +15,27 @@ import (
 	"github.com/UnifyNook/Artex/db"
 )
 
+// newTestServer 构造带完整生命周期的测试 Server：t.Cleanup 中先取消 ctx、
+// 停掉引擎全部任务运行时（planner/worker/deadline 协程，等待退出），再等
+// 归档 worker 落地。server.New 的 restoreTaskRuntimes 会为共享 PG 中残留的
+// 非终态任务重启后台协程，它们持续向 m.dir 写 transcript 等文件；若测试
+// 结束后仍在写，会与 t.TempDir 的 RemoveAll 竞态，偶发
+// 「TempDir RemoveAll cleanup: directory not empty」。t.Cleanup 按注册逆序
+// 执行，本清理晚于调用方注册的临时目录清理，因此先于目录删除运行。
+func newTestServer(t *testing.T, m *Manager, skillDir, dataDir, keyDir string) *Server {
+	t.Helper()
+	ctx, cancel := context.WithCancel(context.Background())
+	s := New(ctx, m, skillDir, dataDir, keyDir)
+	t.Cleanup(func() {
+		cancel()
+		for _, task := range m.List() {
+			s.engine.StopTask(task.ID)
+		}
+		s.archiveWG.Wait()
+	})
+	return s
+}
+
 // TestCoreTaskLifecyclePG exercises the migrated core (tasks/exploration on PG)
 // through the real HTTP mux: create → goal nodes seeded → list → delete cascade.
 func TestCoreTaskLifecyclePG(t *testing.T) {
@@ -24,7 +45,7 @@ func TestCoreTaskLifecyclePG(t *testing.T) {
 	}
 	defer m.Close()
 	td := t.TempDir()
-	s := New(context.Background(), m, td, td, td)
+	s := newTestServer(t, m, td, td, td)
 	h := s.Handler()
 	tok, err := signJWT(s.jwtKey)
 	if err != nil {

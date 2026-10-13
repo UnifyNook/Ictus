@@ -18,6 +18,7 @@
 - **修复集成测试在全新数据库上的存量失败**（此前测试只对长期使用的开发库跑过，全新库从未被全量验证）：
   - `llmrec`：`llm_usage` 表由 server 启动时补建而非 schema.sql，全量并行跑时依赖其他包的测试恰好先建过才能通过；现用例内自行 `EnsureLLMUsageTable`，与启动逻辑等价。
   - `agent`：`TestGraphOverviewExpandsAssociatedCompanyScope` 仍断言 06a43f3 已删除的 `coverage.scope` 平铺结构（含 company 富化），本机可达 PostgreSQL 时稳定失败；现改断言当前契约——task_scope 的 `kind=company` 行带企业富化、overview 的 coverage 计数与 host_count 反映公司资产。
+- **修复 `server` 包集成测试偶发的 `t.TempDir` 清理竞态**：`server.New` 的 `restoreTaskRuntimes` 会为共享 PG 中残留的非终态任务重启 planner/worker 等后台协程，它们在测试结束后仍向 `m.dir` 写 transcript，与 `t.TempDir` 的 `RemoveAll` 竞态，偶发 `directory not empty`（CI run 38348817031 即因此失败）。新增 `newTestServer` 测试辅助：`t.Cleanup` 中先取消 ctx、停掉引擎全部任务运行时（等待退出）并等归档 worker 落地，再由框架删除临时目录；8 个用到该模式的测试统一改用之。
 
 ## [0.3.15] - 2026-10-07
 
