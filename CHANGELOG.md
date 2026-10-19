@@ -11,6 +11,10 @@
 - **新增 push 触发的 CI 工作流（`.github/workflows/ci.yml`）**：每次 push 自动跑 `go vet`、`go build`（含 embedui 生产构建标签）、全量 `go test` 与前端静态导出（含 TypeScript 类型检查）。`go test` 接入 PostgreSQL 16 服务容器（DSN 走 `ARTEX_PG_DSN`），集成测试不再因缺库静默跳过，并以 `-p 1` 串行各包、`-count=1` 禁用测试缓存。拉取私有依赖 Norma 复用 GitHub App 令牌机制。
 - **发行改为「先过 CI 再打包」**：推 tag 触发的 release 工作流把 ci.yml 作为首个 job（`workflow_call` + `secrets: inherit`），全绿后才开始前端导出、五平台交叉编译、创建 Release 与推送 GHCR 镜像；检查逻辑单点维护，发布链路零重复定义。日常 push 只跑 CI，不产生任何发布产物。
 
+#### 修改的功能
+
+- **push 触发增加 paths-ignore 过滤**：仅改动纯文档（`**.md`）、compose 编排（`docker-compose*.yml`）、README 配图（`screenshots/`）与仓库元信息（`LICENSE`、`.gitignore`）的 push 不再触发 CI——这些文件不被 vet / build / test 与前端导出消费。paths 过滤对 `workflow_call` 不生效，release 打包前的全量过检不受影响。
+
 ### 测试基础设施
 
 #### 修复的问题

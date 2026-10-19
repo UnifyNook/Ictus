@@ -4,6 +4,14 @@ on:
   push:
     # 只匹配分支：tag 推送交给 release 工作流（其内部先复用本工作流），避免重复跑
     branches: ["**"]
+    # 仅改动 CI 各步骤不消费的文件时不触发：纯文档（README/AGENTS/CHANGELOG/
+    # skills 指南等）、compose 编排、README 配图与仓库元信息
+    paths-ignore:
+      - "**.md"
+      - "docker-compose*.yml"
+      - "screenshots/**"
+      - "LICENSE"
+      - ".gitignore"
   workflow_call: # 供 release.yml 复用：打包前必须先过这里全部检查
 
 permissions:
