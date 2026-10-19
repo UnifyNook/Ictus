@@ -1,24 +1,24 @@
 <div align="center">
 
-# ARTEX
+# Ictus
 
-AI 自主渗透测试系统（Go 后端 + Next.js 前端）
+AI 自主渗透测试系统
 
-> 本项目为基于[artex](https://github.com/Autumn-27/artex)历史版本0.3.15的二开版本，延续使用对应的开源协议，但是还是需要提醒使用本项目的用户，请遵守您当地的相关法律法规！
-> 
-> **ARTEX 仅供个人学习、代码研究与本地技术验证使用，不得用于对任何线上系统或网站发起实际测试。**
+> 本项目为基于[artex](https://github.com/Autumn-27/artex)历史版本0.3.15的fork版本，延续使用对应的开源协议，但是还是需要提醒使用本项目的用户，请遵守您当地的相关法律法规！
+>
+> **Ictus 仅供个人学习、代码研究与本地技术验证使用，不得用于对任何线上系统或网站发起实际测试。**
 
 <p align="center">
-  <a href="https://github.com/UnifyNook/Artex/stargazers">
-    <img src="https://img.shields.io/github/stars/UnifyNook/Artex?style=for-the-badge&logo=github&logoColor=white&labelColor=24292e&color=ffc107" alt="GitHub Stars" />
+  <a href="https://github.com/UnifyNook/Ictus/stargazers">
+    <img src="https://img.shields.io/github/stars/UnifyNook/Ictus?style=for-the-badge&logo=github&logoColor=white&labelColor=24292e&color=ffc107" alt="GitHub Stars" />
   </a>
   <a href="#">
-    <img alt="GitHub License" src="https://img.shields.io/github/license/UnifyNook/Artex?style=for-the-badge&logo=gitbook&logoColor=white">
+    <img alt="GitHub License" src="https://img.shields.io/github/license/UnifyNook/Ictus?style=for-the-badge&logo=gitbook&logoColor=white">
   </a>
-  <a href="https://zread.ai/UnifyNook/Artex">
+  <a href="https://zread.ai/UnifyNook/Ictus">
     <img src="https://img.shields.io/badge/Zread-Ask_AI-00b0aa?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuOTYxNTYgMS42MDAxSDIuMjQxNTZDMS44ODgxIDEuNjAwMSAxLjYwMTU2IDEuODg2NjQgMS42MDE1NiAyLjI0MDFWNC45NjAxQzEuNjAxNTYgNS4zMTM1NiAxLjg4ODEgNS42MDAxIDIuMjQxNTYgNS42MDAxSDQuOTYxNTZDNS4zMTUwMiA1LjYwMDEgNS42MDE1NiA1LjMxMzU2IDUuNjAxNTYgNC45NjAxVjIuMjQwMUM1LjYwMTU2IDEuODg2NjQgNS4zMTUwMiAxLjYwMDEgNC45NjE1NiAxLjYwMDFaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik00Ljk2MTU2IDEwLjM5OTlIMi4yNDE1NkMxLjg4ODEgMTAuMzk5OSAxLjYwMTU2IDEwLjY4NjQgMS42MDE1NiAxMS4wMzk5VjEzLjc1OTlDMS42MDE1NiAxNC4xMTM0IDEuODg4MSAxNC4zOTk5IDIuMjQxNTYgMTQuMzk5OUg0Ljk2MTU2QzUuMzE1MDIgMTQuMzk5OSA1LjYwMTU2IDE0LjExMzQgNS42MDE1NiAxMy43NTk5VjExLjAzOTlDNS42MDE1NiAxMC42ODY0IDUuMzE1MDIgMTAuMzk5OSA0Ljk2MTU2IDEwLjM5OTlaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik0xMy43NTg0IDEuNjAwMUgxMS4wMzg0QzEwLjY4NSAxLjYwMDEgMTAuMzk4NCAxLjg4NjY0IDEwLjM5ODQgMi4yNDAxVjQuOTYwMUMxMC4zOTg0IDUuMzEzNTYgMTAuNjg1IDUuNjAwMSAxMS4wMzg0IDUuNjAwMUgxMy43NTg0QzE0LjExMTkgNS42MDAxIDE0LjM5ODQgNS4zMTM1NiAxNC4zOTg0IDQuOTYwMVYyLjI0MDFDMTQuMzk4NCAxLjg4NjY0IDE0LjExMTkgMS42MDAxIDEzLjc1ODQgMS42MDAxWiIgZmlsbD0iI2ZmZiIvPgo8cGF0aCBkPSJNNCAxMkwxMiA0TDQgMTJaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik00IDEyTDEyIDQiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K&logoColor=white" alt="Zread AI" />
   </a>
-  <a href="https://deepwiki.com/UnifyNook/Artex">
+  <a href="https://deepwiki.com/UnifyNook/Ictus">
     <img src="https://img.shields.io/badge/DeepWiki-Docs-6366f1?style=for-the-badge&logo=gitbook&logoColor=white" alt="DeepWiki" />
   </a>
 </p>
@@ -29,34 +29,33 @@ AI 自主渗透测试系统（Go 后端 + Next.js 前端）
 
 ## 截图预览
 
-| 仪表盘（总览 / Token 消耗 / 活动流） | 任务列表 |
-| :---: | :---: |
+| 仪表盘（总览 / Token 消耗 / 活动流） |            任务列表            |
+| :----------------------------------: | :----------------------------: |
 | ![仪表盘](screenshots/dashboard.png) | ![任务](screenshots/tasks.png) |
 
-| 任务 · 执行过程（会话 / 工具调用） | 探索链路 |
-| :---: | :---: |
+|  任务 · 执行过程（会话 / 工具调用）   |              探索链路              |
+| :-----------------------------------: | :--------------------------------: |
 | ![执行过程](screenshots/sessions.png) | ![探索链路](screenshots/graph.png) |
 
-| 发现 | 资产 |
-| :---: | :---: |
+|               发现                |              资产               |
+| :-------------------------------: | :-----------------------------: |
 | ![发现](screenshots/findings.png) | ![资产](screenshots/assets.png) |
 
 | 资产覆盖图（力导向布局 · 已测高亮 · 节点折叠展开） |
-| :---: |
-| ![资产覆盖图](screenshots/assets_test.png) |
+| :------------------------------------------------: |
+|     ![资产覆盖图](screenshots/assets_test.png)     |
 
-| 流量录制 | 人在环路对话 |
-| :---: | :---: |
+|             流量录制             |         人在环路对话          |
+| :------------------------------: | :---------------------------: |
 | ![流量](screenshots/traffic.png) | ![对话](screenshots/chat.png) |
 
-| Agent 管理 | LLM 配置 |
-| :---: | :---: |
+|            Agent 管理            |          LLM 配置           |
+| :------------------------------: | :-------------------------: |
 | ![Agent](screenshots/agents.png) | ![LLM](screenshots/llm.png) |
 
-| 拦截审批 | 后端日志 |
-| :---: | :---: |
+|              拦截审批              |           后端日志            |
+| :--------------------------------: | :---------------------------: |
 | ![拦截](screenshots/intercept.png) | ![日志](screenshots/logs.png) |
-
 
 ---
 
@@ -64,7 +63,6 @@ AI 自主渗透测试系统（Go 后端 + Next.js 前端）
 
 全局「审批记录」、任务内「拦截审批」及对话中的审批卡片均支持展开查看详情。展示结构参考
 [AegisHook 的审批详情组件](https://github.com/RuoJi6/AegisHook/blob/main/web/src/components/CallDetail.vue)，沿用 ARTEX 的组件和主题：
-
 
 ## 资产同步（ScopeSentry）
 
@@ -76,14 +74,13 @@ AI 自主渗透测试系统（Go 后端 + Next.js 前端）
 
 ---
 
-## 安装
-
-> 依赖数据库 **PostgreSQL**；探索需配置 **LLM**（`ANTHROPIC_API_KEY` 或 `OPENAI_API_KEY`，也可在 UI 里配）。
+<details>
+<summary>安装</summary>
 
 ### 方式一：一键安装脚本（推荐）
 
 ```bash
-git clone https://github.com/UnifyNook/Artex.git
+git clone https://github.com/UnifyNook/Ictus.git
 cd Artex
 ./install.sh
 ```
@@ -98,10 +95,10 @@ cd Artex
 ### 方式二：Docker Compose（手动）
 
 ```bash
-git clone https://github.com/UnifyNook/Artex.git
+git clone https://github.com/UnifyNook/Ictus.git
 cd Artex
 cp .env.example .env          # 填 POSTGRES_PASSWORD、可选 ANTHROPIC_API_KEY
-docker compose up -d          # 拉取 ghcr.io/unifynook/artex 镜像 + postgres
+docker compose up -d          # 拉取 ghcr.io/UnifyNook/Ictus 镜像 + postgres
 # → http://localhost:8787
 ```
 
@@ -114,7 +111,7 @@ docker compose up -d          # 拉取 ghcr.io/unifynook/artex 镜像 + postgres
 
 ### 方式三：下载预编译二进制（Releases）
 
-到 [Releases](https://github.com/UnifyNook/Artex/releases) 下载对应平台的 zip，解压后得到 `artex` + `start.sh`（Windows 为 `start.bat`）+ `skills/` + `config.example.json`：
+到 [Releases](https://github.com/UnifyNook/Ictus/releases) 下载对应平台的 zip，解压后得到 `artex` + `start.sh`（Windows 为 `start.bat`）+ `skills/` + `config.example.json`：
 
 ```bash
 cp config.example.json config.json   # 填好 database 连接
@@ -152,9 +149,12 @@ ARTEX_TARGETS=linux/amd64,windows/amd64 ./build.sh --release
 ./build.sh --target linux/amd64 --upx
 ```
 
+</details>
+
 ---
 
-## 更新升级
+<details>
+<summary>更新升级</summary>
 
 > 升级只换程序、不动数据：Postgres 数据卷 `pgdata`、`./data`（jwt.key / SQLite 等）、`./skills` 都会保留。**数据库迁移无需手动执行**——`artex` 每次启动会幂等重跑 `schema.sql`（含 `ADD COLUMN` / `CREATE INDEX IF NOT EXISTS`），即“重启即迁移”。升级前仍建议先备份 `./data` 与数据库。
 
@@ -196,7 +196,7 @@ docker image prune -f          # 清理旧镜像（可选）
 
 ### 方式四：预编译二进制（Releases）
 
-到 [Releases](https://github.com/UnifyNook/Artex/releases) 下载新版本 zip，停掉旧进程后覆盖 `artex` 与 `skills/`（保留你的 `config.json` 与 `data/`），重启即可：
+到 [Releases](https://github.com/UnifyNook/Ictus/releases) 下载新版本 zip，停掉旧进程后覆盖 `artex` 与 `skills/`（保留你的 `config.json` 与 `data/`），重启即可：
 
 ```bash
 cp -r <解压目录>/skills ./ && cp <解压目录>/artex ./
@@ -213,18 +213,24 @@ CGO_ENABLED=0 go build -tags embedui -o artex ./cmd/artex
 # 重启 ./start.sh
 ```
 
+</details>
+
 ---
 
-## 配置
+<details>
+<summary>配置</summary>
 
 **数据库**（`config.json`，或用环境变量 `ARTEX_PG_DSN` 覆盖）：
 
 ```json
 {
   "database": {
-    "host": "127.0.0.1", "port": 5432,
-    "user": "artex", "password": "yourpass",
-    "dbname": "artex", "sslmode": "disable"
+    "host": "127.0.0.1",
+    "port": 5432,
+    "user": "artex",
+    "password": "yourpass",
+    "dbname": "artex",
+    "sslmode": "disable"
   }
 }
 ```
@@ -265,13 +271,12 @@ server {
 
 > 仅当 SSE 需要走与页面不同的来源（如独立子域）时，才在**构建期**设置 `NEXT_PUBLIC_SSE_BASE`（该变量在 `next build` 时固化进静态包，容器运行时再设无效）。
 
+</details>
+
 ---
 
-
-
-## 开发
-
-### 手动漏洞复测
+<details>
+<summary>手动漏洞复测</summary>
 
 任务详情的「复测」页签可分页选择本任务的漏洞、查看历次结论和证据，并手动发起复测。启动后保留当前页签，显示转圈图标和「复测中」；确认修复后同步更新漏洞状态。
 
@@ -292,9 +297,12 @@ server {
 - 测试：`go test ./...`
 - Mock 预览（无后端）：`cd web && NEXT_PUBLIC_MOCK=1 npm run dev`
 
+</details>
+
 ---
 
-## 系统技术架构
+<details>
+<summary>系统技术架构</summary>
 
 ARTEX 是一套 **LLM 多 agent 驱动的自主渗透系统**：Go 单体后端（内嵌 Next.js 前端）+ PostgreSQL，agent 能力由 [`norma`](https://github.com/UnifyNook/Norma) SDK 提供（`agentcore` / `tool` / `permission` / `harness` / `memory` / `transcript`）。核心是**双图架构**，以及围绕它的两条自主性机制：**worker 间过程级信息交换**与 **planner 多轮共享 todolist 稳定攻击链路**。
 
@@ -345,14 +353,14 @@ flowchart TB
   MA -.-> EXT
 ```
 
-| 层 | 职责 |
-| --- | --- |
-| **前端** | Next.js 静态导出，`go:embed` 内嵌进单二进制；可视化任务/资产/探索链路/覆盖图，人在环路对话 |
-| **server** | `net/http` 路由 + JWT 鉴权 + SSE；`Manager` 托管任务、引擎、DB store 的生命周期 |
-| **engine** | 每任务一个 `plannerLoop` + N 个 worker goroutine；意图领取、超时/暂停/drain |
-| **agent** | goals / planner / worker / mainagent，`ToolSet` 把双图暴露成 LLM 工具 |
-| **db** | 双图的 Postgres 落地（pgx）；schema 随 `go:embed` 每次启动幂等建表 |
-| **支撑** | 记录型 MITM 代理、审批门、异步补全、MCP/技能/记忆/报告 |
+| 层         | 职责                                                                                       |
+| ---------- | ------------------------------------------------------------------------------------------ |
+| **前端**   | Next.js 静态导出，`go:embed` 内嵌进单二进制；可视化任务/资产/探索链路/覆盖图，人在环路对话 |
+| **server** | `net/http` 路由 + JWT 鉴权 + SSE；`Manager` 托管任务、引擎、DB store 的生命周期            |
+| **engine** | 每任务一个 `plannerLoop` + N 个 worker goroutine；意图领取、超时/暂停/drain                |
+| **agent**  | goals / planner / worker / mainagent，`ToolSet` 把双图暴露成 LLM 工具                      |
+| **db**     | 双图的 Postgres 落地（pgx）；schema 随 `go:embed` 每次启动幂等建表                         |
+| **支撑**   | 记录型 MITM 代理、审批门、异步补全、MCP/技能/记忆/报告                                     |
 
 ### 双图架构：探索图 + 资产图
 
@@ -462,12 +470,32 @@ flowchart TB
 
 于是攻击链在“事件驱动 + 无状态会话”的环境下依然**稳定推进、不重复、不错序**——这是 ARTEX 能自主走完多步利用链的关键。
 
+</details>
+
 ---
 
-## 参考
+<details>
+<summary>AI开发声明</summary>
 
-https://github.com/oritera/Cairn
+本项目在开发过程中使用了 AI 辅助编程，主要用于代码阅读、功能改造、问题排查、重构建议与文档整理。AI 参与了部分代码生成与修改流程，但所有改动均以个人需求为目标，不代表上游项目立场，也不保证与上游版本保持实时同步。
 
+由于本项目包含 AI 辅助生成与人工调整内容，可能存在实现不完善、边界情况处理不足或潜在兼容性问题。若因部署、修改、使用本项目产生任何第三方争议、服务风险、账号风险或合规问题，均由使用者自行承担，与本项目维护者及上游项目无关。
+
+### 使用的 AI Coding 工具
+
+- CodeBuddy[VS Code插件]
+- Claude Desktop - Code
+
+### 当前使用的 AI 模型
+
+> 关于模型，实际格式为`供应商/模型[思维强度/是否开启思考]`
+
+- Zhipu/GLM-5.3[Max]
+- Zhipu/GLM-5.3-Flash[Max]
+
+> 在本项目开发完善期间，有部分模型仅使用本项目进行能力测试，并非主力开发，清单如下：
+
+</details>
 
 ## 许可与免责声明
 
