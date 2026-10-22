@@ -4,6 +4,13 @@
 
 ## [Unreleased]
 
+### 安全
+
+#### 修复的问题
+
+- **构建工具链基线升至 Go 1.26.10**（`go.mod` 的 `go` 指令，Norma 仓库同步）：低于 1.26.10 的工具链不再能编译本仓库，规避 CVE-2026-111943（证书链校验接受 eMudhra 弱私钥链）进入发布产物；CI 的 Go job 按 `go-version-file` 自动跟随。
+- **运行镜像内置 Node 由 20.x 升至 24.x LTS（>= 24.22.1），CI 前端构建 Node 显式钉到 24.22.1**：Node 20 已 EOL，CVE-2026-111497（Brotli 解码越界写）与 CVE-2026-105483 / 106069（TLS 主机名校验绕过）不再有 20.x 补丁；24 LTS 为 Vercel / Playwright 当前基准运行时，前端 `npm ci` / `build:static` / `next dev` 已在 24.22.1 上实测通过。
+
 ### CI
 
 #### 新增的功能
