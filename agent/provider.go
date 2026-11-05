@@ -2,9 +2,9 @@
 // agent-core SDK) to the dual SQLite graph. See docs/ARTEX-架构设计.md
 // §4.3 (planner) and §4.4 (work agent).
 //
-// Provider configuration is read from the environment so the system runs with
-// any Anthropic- or OpenAI-format endpoint. If no key is configured, FromEnv
-// returns ok=false and the exploration engine stays idle (an LLM is required).
+// Provider configuration comes from the UI-stored LLM profile (llm_profiles
+// table), resolved at startup by the server. With no active profile the
+// exploration engine stays idle (an LLM is required).
 package agent
 
 import (
@@ -15,7 +15,6 @@ import (
 	"log"
 	"net/http"
 	"net/url"
-	"os"
 	"regexp"
 	"strings"
 	"time"
@@ -28,7 +27,7 @@ import (
 	"github.com/UnifyNook/Norma/transcript"
 )
 
-// Config describes the LLM backend resolved from the environment.
+// Config describes the LLM backend built from a UI-stored profile (ConfigFrom).
 type Config struct {
 	Format  llm.Format
 	BaseURL string
@@ -135,62 +134,6 @@ func compactionConfig(windowTokens int) *compaction.Config {
 	return &compaction.Config{ContextWindow: windowTokens}
 }
 
-// FromEnv resolves the LLM provider config:
-//
-//	ARTEX_LLM_PROVIDER = anthropic|openai (default: inferred from keys)
-//	ARTEX_LLM_MODEL    = model id        (default: per provider)
-//	ARTEX_LLM_BASE_URL = endpoint        (optional)
-//	ARTEX_LLM_PROXY    = proxy URL        (optional; http/https/socks5)
-//	ANTHROPIC_API_KEY / OPENAI_API_KEY         = credentials
-func FromEnv() (Config, bool) {
-	prov := os.Getenv("ARTEX_LLM_PROVIDER")
-	anthKey := os.Getenv("ANTHROPIC_API_KEY")
-	oaiKey := os.Getenv("OPENAI_API_KEY")
-
-	if prov == "" {
-		switch {
-		case anthKey != "":
-			prov = "anthropic"
-		case oaiKey != "":
-			prov = "openai"
-		default:
-			return Config{}, false
-		}
-	}
-
-	c := Config{
-		BaseURL: os.Getenv("ARTEX_LLM_BASE_URL"),
-		Model:   os.Getenv("ARTEX_LLM_MODEL"),
-		Proxy:   strings.TrimSpace(os.Getenv("ARTEX_LLM_PROXY")),
-		// 默认流式;ARTEX_LLM_STREAM=false/0/off 显式关闭走非流式。
-		Stream: !isFalsy(os.Getenv("ARTEX_LLM_STREAM")),
-	}
-	switch prov {
-	case "openai":
-		c.Format = llm.FormatOpenAI
-		c.APIKey = oaiKey
-		if c.Model == "" {
-			c.Model = "gpt-4o"
-		}
-	case "openai-responses":
-		c.Format = llm.FormatOpenAIResponses
-		c.APIKey = oaiKey
-		if c.Model == "" {
-			c.Model = "gpt-5"
-		}
-	default:
-		c.Format = llm.FormatAnthropic
-		c.APIKey = anthKey
-		if c.Model == "" {
-			c.Model = "claude-opus-4-8"
-		}
-	}
-	if c.APIKey == "" {
-		return Config{}, false
-	}
-	return c, true
-}
-
 // ConfigFrom builds a Config from UI-provided strings (provider defaults to
 // anthropic; model defaults per provider). Inputs are trimmed and the base URL
 // is normalized to the API base the provider expects (the provider appends the
@@ -227,16 +170,6 @@ func ConfigFrom(provider, model, baseURL, apiKey, proxy string) Config {
 		}
 	}
 	return c
-}
-
-// isFalsy reports whether an env-var string explicitly requests "off". Empty or
-// unrecognized → false (so an unset var keeps the streaming default).
-func isFalsy(s string) bool {
-	switch strings.ToLower(strings.TrimSpace(s)) {
-	case "0", "false", "off", "no":
-		return true
-	}
-	return false
 }
 
 // Provider returns the short provider name ("anthropic"/"openai").

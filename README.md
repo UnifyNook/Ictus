@@ -98,7 +98,7 @@ cd Artex
 ```bash
 git clone https://github.com/UnifyNook/Ictus.git
 cd Artex
-cp .env.example .env          # 填 POSTGRES_PASSWORD、可选 ANTHROPIC_API_KEY
+cp .env.example .env          # 填 POSTGRES_PASSWORD（LLM 到 UI 的「LLM 配置」页配）
 docker compose up -d          # 拉取 ghcr.io/UnifyNook/Ictus 镜像 + postgres
 # → http://localhost:8787
 ```
@@ -236,8 +236,12 @@ CGO_ENABLED=0 go build -tags embedui -o artex ./cmd/artex
 }
 ```
 
-**LLM**：`export ANTHROPIC_API_KEY=sk-...`（或 `OPENAI_API_KEY`），也可在 UI 的「LLM 配置」页填写。
-可选：`ARTEX_LLM_PROVIDER` / `ARTEX_LLM_MODEL` / `ARTEX_LLM_BASE_URL` / `ARTEX_LLM_PROXY`。
+**Docker Compose 数据库**（`.env`）：`POSTGRES_USER` / `POSTGRES_PASSWORD` / `POSTGRES_DB` 拼接为容器的
+`ARTEX_PG_DSN`；`POSTGRES_HOST`（容器名，默认 `postgres`）与 `POSTGRES_PORT`（端口，默认 `5432`）
+可自定义，postgres 服务按 `POSTGRES_HOST` 注册网络别名，容器间照常解析。
+
+**LLM**：在 UI 的「LLM 配置」页填写（provider / model / base URL / key / proxy），
+配置入库随启动自动加载；不读取环境变量。
 
 **并发**：每个任务的 work agent 数在「系统设置」里配置（默认 3）。
 

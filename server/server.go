@@ -236,21 +236,15 @@ func New(ctx context.Context, m *Manager, skillDir string, dataDir string, keyDi
 		go s.discoverEmptyMCPsOnStartup()
 		logSink.SetDB(ctx, m.pg) // restore last 100 log rows and enable async persistence
 	}
-	// precedence: persisted DB config > env.
+	// LLM 配置来自 UI 入库的 llm_profiles；无激活 profile 时引擎空转等待配置。
 	if cfg, ok := s.loadLLMConfig(); ok {
 		if err := s.applyLLM(cfg); err != nil {
 			log.Printf("[engine] saved LLM config init failed — engine idle: %v", err)
 		} else {
 			log.Printf("[engine] LLM configured from DB: %s / %s", cfg.Provider(), cfg.Model)
 		}
-	} else if cfg, ok := agent.FromEnv(); ok {
-		if err := s.applyLLM(cfg); err != nil {
-			log.Printf("[engine] env provider init failed — engine idle: %v", err)
-		} else {
-			log.Printf("[engine] LLM configured from env: %s / %s", cfg.Provider(), cfg.Model)
-		}
 	} else {
-		log.Printf("[engine] no LLM provider configured — engine idle until set via /api/llm or env")
+		log.Printf("[engine] no LLM provider configured — engine idle until set via /api/llm")
 	}
 	s.restoreTaskRuntimes()
 	go s.reconcileConcurrency()

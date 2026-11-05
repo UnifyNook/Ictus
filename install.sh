@@ -35,13 +35,11 @@ install_docker(){
   ensure_docker
   if [ ! -f .env ]; then
     cp .env.example .env 2>/dev/null || true
-    local pw key
+    local pw
     pw="$(ask 'Postgres 密码（回车随机生成）' "$(rand)")"
-    key="$(ask 'ANTHROPIC_API_KEY（可留空，后续在 UI 配）' '')"
     sed -i.bak "s|^POSTGRES_PASSWORD=.*|POSTGRES_PASSWORD=${pw}|" .env
-    sed -i.bak "s|^ANTHROPIC_API_KEY=.*|ANTHROPIC_API_KEY=${key}|" .env
     rm -f .env.bak
-    ok "已生成 .env（POSTGRES_PASSWORD 已设置）"
+    ok "已生成 .env（POSTGRES_PASSWORD 已设置；LLM 到 UI 的「LLM 配置」页填写）"
   else
     info "沿用已存在的 .env"
   fi

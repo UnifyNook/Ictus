@@ -4,6 +4,16 @@
 
 ## [Unreleased]
 
+### 配置
+
+#### 新增的功能
+
+- **Docker 部署数据库连接参数化**：`.env` 新增 `POSTGRES_HOST`（容器名，默认 `postgres`）与 `POSTGRES_PORT`（端口，默认 `5432`），artex 容器的 `ARTEX_PG_DSN` 由 `POSTGRES_*` 全量拼接：`postgres://${POSTGRES_USER:-artex}:${POSTGRES_PASSWORD}@${POSTGRES_HOST:-postgres}:${POSTGRES_PORT:-5432}/${POSTGRES_DB:-artex}?sslmode=disable`；postgres 服务同时按 `POSTGRES_HOST` 注册 compose 网络别名，自定义容器名后容器间解析不受影响。
+
+#### 移除的功能
+
+- **移除 LLM 环境变量配置通道**：`ANTHROPIC_API_KEY`、`OPENAI_API_KEY`、`ARTEX_LLM_PROVIDER`、`ARTEX_LLM_MODEL`、`ARTEX_LLM_BASE_URL`、`ARTEX_LLM_PROXY` 不再被读取、解析与识别（`agent.FromEnv` 删除，docker compose / install.sh / `.env.example` 不再透传），LLM 统一在 UI「LLM 配置」页填写并入库，启动时从 `llm_profiles` 加载激活 profile。原先依赖环境变量注入 LLM 的部署，升级后需在 UI 重新配置一次。
+
 ### 安全
 
 #### 修复的问题
