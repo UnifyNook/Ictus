@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // pgListCommands returns tool executions (any tool) from the activity table.

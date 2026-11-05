@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 const maxTaskAssetRequestBytes = 512 << 10

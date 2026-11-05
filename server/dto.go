@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/traffic"
+	"github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/traffic"
 )
 
 // DTO/serialization layer: each handler emits EXACTLY the frontend's spec shapes

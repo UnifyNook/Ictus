@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // Initialize an explicitly configured fresh database before taking the same

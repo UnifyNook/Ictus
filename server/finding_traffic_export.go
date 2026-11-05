@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/evidence"
-	"github.com/UnifyNook/Artex/report"
+	"github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/evidence"
+	"github.com/UnifyNook/Ictus/report"
 )
 
 func writeFindingsEvidenceZip(out io.Writer, findings []*db.DBFinding, stage string, now time.Time) error {

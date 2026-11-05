@@ -3,7 +3,7 @@ package server
 import (
 	"sync"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // Broadcaster is a per-task in-process pub/sub for live activity events. The

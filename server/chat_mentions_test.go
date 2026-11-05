@@ -13,8 +13,8 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/UnifyNook/Artex/agent"
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/agent"
+	"github.com/UnifyNook/Ictus/db"
 	"github.com/UnifyNook/Norma/llm"
 )
 

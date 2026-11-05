@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/UnifyNook/Artex/agent"
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/agent"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 type goalSpec struct {

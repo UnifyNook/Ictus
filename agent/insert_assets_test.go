@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // testDB opens a DB connection, skipping if PG is unavailable.

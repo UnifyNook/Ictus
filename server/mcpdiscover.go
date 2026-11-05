@@ -6,8 +6,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/mcphttp"
+	"github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/mcphttp"
 	"github.com/UnifyNook/Norma/mcp"
 	actool "github.com/UnifyNook/Norma/tool"
 )

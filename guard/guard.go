@@ -14,7 +14,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/UnifyNook/Artex/intercept"
+	"github.com/UnifyNook/Ictus/intercept"
 	"github.com/UnifyNook/Norma/hook"
 )
 

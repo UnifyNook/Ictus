@@ -14,8 +14,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/traffic"
+	"github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/traffic"
 )
 
 func evidenceFixture(t *testing.T) (*Store, db.RecordFindingInput, string) {

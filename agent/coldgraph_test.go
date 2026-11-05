@@ -3,7 +3,7 @@ package agent
 import (
 	"testing"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // helper: intent/fact node

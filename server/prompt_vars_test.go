@@ -3,7 +3,7 @@ package server
 import (
 	"testing"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // A stored catalog entry that collides with a global runtime var (e.g. a legacy

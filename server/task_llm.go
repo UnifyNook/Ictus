@@ -12,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/UnifyNook/Artex/agent"
-	"github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/llmrec"
+	"github.com/UnifyNook/Ictus/agent"
+	"github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/llmrec"
 	"github.com/UnifyNook/Norma/llm"
 	"github.com/UnifyNook/Norma/transcript"
 )

@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 	actool "github.com/UnifyNook/Norma/tool"
 )
 

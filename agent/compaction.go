@@ -26,7 +26,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 	"github.com/UnifyNook/Norma/llm"
 	"github.com/UnifyNook/Norma/transcript"
 )

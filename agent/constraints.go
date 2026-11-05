@@ -3,7 +3,7 @@ package agent
 import (
 	"strings"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // constraintBlock renders this task's operation constraints (task_constraints) as a

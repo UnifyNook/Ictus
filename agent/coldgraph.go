@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // cgNode is the minimal node view the cold-graph algorithms need.

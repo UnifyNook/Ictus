@@ -16,10 +16,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/UnifyNook/Artex/agent"
-	"github.com/UnifyNook/Artex/config"
-	"github.com/UnifyNook/Artex/selfupdate"
-	"github.com/UnifyNook/Artex/server"
+	"github.com/UnifyNook/Ictus/agent"
+	"github.com/UnifyNook/Ictus/config"
+	"github.com/UnifyNook/Ictus/selfupdate"
+	"github.com/UnifyNook/Ictus/server"
 )
 
 // version is the build version, injected at release time via

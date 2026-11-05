@@ -14,12 +14,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/UnifyNook/Artex/agent"
-	pgdb "github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/enrich"
-	"github.com/UnifyNook/Artex/guard"
-	"github.com/UnifyNook/Artex/intercept"
-	"github.com/UnifyNook/Artex/traffic"
+	"github.com/UnifyNook/Ictus/agent"
+	pgdb "github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/enrich"
+	"github.com/UnifyNook/Ictus/guard"
+	"github.com/UnifyNook/Ictus/intercept"
+	"github.com/UnifyNook/Ictus/traffic"
 	actool "github.com/UnifyNook/Norma/tool"
 )
 

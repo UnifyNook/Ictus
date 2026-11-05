@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/notify"
+	"github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/notify"
 )
 
 // 本文件是推送功能的 HTTP 接口。全部路由挂在 requireAuth 之后（见 Handler()），

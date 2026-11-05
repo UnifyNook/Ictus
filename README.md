@@ -99,7 +99,7 @@ cd Artex
 git clone https://github.com/UnifyNook/Ictus.git
 cd Artex
 cp .env.example .env          # 填 POSTGRES_PASSWORD（LLM 到 UI 的「LLM 配置」页配）
-docker compose up -d          # 拉取 ghcr.io/UnifyNook/Ictus 镜像 + postgres
+docker compose up -d          # 拉取 ghcr.io/unifynook/ictus 镜像 + postgres
 # → http://localhost:8787
 ```
 

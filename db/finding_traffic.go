@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/UnifyNook/Artex/notify"
+	"github.com/UnifyNook/Ictus/notify"
 )
 
 var (

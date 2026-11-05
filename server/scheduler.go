@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // Scheduler drives P3 triggers: on each tick it fires due interval triggers and

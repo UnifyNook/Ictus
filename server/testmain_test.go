@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 	_ "github.com/jackc/pgx/v5/stdlib"
 )
 

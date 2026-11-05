@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // companyScopeInputs accepts both the new [{kind,value}] contract and the

@@ -3,7 +3,7 @@ package server
 import (
 	"net/http"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // ---------- P3 agent triggers (仅自定义 agent) ----------

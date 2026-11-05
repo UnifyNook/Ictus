@@ -8,8 +8,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/UnifyNook/Artex/agent"
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/agent"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // 任务级超时协调器(见 docs/任务级超时与收尾设计.md §4/§8.5)。

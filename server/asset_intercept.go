@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // --- asset intercept rule CRUD ---

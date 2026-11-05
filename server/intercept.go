@@ -11,10 +11,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/guard"
-	"github.com/UnifyNook/Artex/intercept"
-	"github.com/UnifyNook/Artex/llmrec"
+	"github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/guard"
+	"github.com/UnifyNook/Ictus/intercept"
+	"github.com/UnifyNook/Ictus/llmrec"
 	"github.com/UnifyNook/Norma/llm"
 )
 

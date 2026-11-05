@@ -9,7 +9,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // maxChatUpload caps a single chat-attachment upload request (memory + spill).

@@ -17,7 +17,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 	"github.com/UnifyNook/Norma/permission"
 	actool "github.com/UnifyNook/Norma/tool"
 )

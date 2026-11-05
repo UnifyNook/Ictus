@@ -1,4 +1,4 @@
-module github.com/UnifyNook/Artex
+module github.com/UnifyNook/Ictus
 
 go 1.26.10
 

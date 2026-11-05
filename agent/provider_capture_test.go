@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/UnifyNook/Artex/llmrec"
+	"github.com/UnifyNook/Ictus/llmrec"
 )
 
 // The transport is the only layer that still sees the wire bodies: norma builds

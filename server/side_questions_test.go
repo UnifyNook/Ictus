@@ -14,9 +14,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/UnifyNook/Artex/agent"
-	"github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/sidequestion"
+	"github.com/UnifyNook/Ictus/agent"
+	"github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/sidequestion"
 	"github.com/UnifyNook/Norma/harness"
 	"github.com/UnifyNook/Norma/llm"
 )

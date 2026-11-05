@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 	acperm "github.com/UnifyNook/Norma/permission"
 	actool "github.com/UnifyNook/Norma/tool"
 )

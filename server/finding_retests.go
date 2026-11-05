@@ -12,9 +12,9 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/UnifyNook/Artex/agent"
-	"github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/intercept"
+	"github.com/UnifyNook/Ictus/agent"
+	"github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/intercept"
 	actool "github.com/UnifyNook/Norma/tool"
 )
 

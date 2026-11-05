@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/UnifyNook/Artex/agent"
-	"github.com/UnifyNook/Artex/llmrec"
+	"github.com/UnifyNook/Ictus/agent"
+	"github.com/UnifyNook/Ictus/llmrec"
 	"github.com/UnifyNook/Norma/llm"
 	"github.com/UnifyNook/Norma/transcript"
 )

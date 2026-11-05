@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 	"github.com/UnifyNook/Norma/agentcore"
 	"github.com/UnifyNook/Norma/llm"
 	acperm "github.com/UnifyNook/Norma/permission"

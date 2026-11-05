@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/UnifyNook/Artex/sidequestion"
+	"github.com/UnifyNook/Ictus/sidequestion"
 	"github.com/UnifyNook/Norma/llm"
 )
 

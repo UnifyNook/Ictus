@@ -22,7 +22,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // ctxKey is the unexported context key type to avoid collisions.

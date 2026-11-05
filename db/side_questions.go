@@ -7,7 +7,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/UnifyNook/Artex/sidequestion"
+	"github.com/UnifyNook/Ictus/sidequestion"
 	"github.com/google/uuid"
 )
 

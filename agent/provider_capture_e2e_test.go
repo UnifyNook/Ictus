@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/UnifyNook/Artex/llmrec"
+	"github.com/UnifyNook/Ictus/llmrec"
 	"github.com/UnifyNook/Norma/llm"
 )
 

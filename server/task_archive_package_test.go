@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	pgdb "github.com/UnifyNook/Artex/db"
+	pgdb "github.com/UnifyNook/Ictus/db"
 	"github.com/klauspost/compress/zstd"
 )
 

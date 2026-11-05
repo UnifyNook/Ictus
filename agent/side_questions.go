@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/UnifyNook/Artex/sidequestion"
+	"github.com/UnifyNook/Ictus/sidequestion"
 	"github.com/UnifyNook/Norma/agentcore"
 )
 

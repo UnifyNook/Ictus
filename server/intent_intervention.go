@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 const maxWorkerMessageBytes = 64 << 10

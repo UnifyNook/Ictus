@@ -7,8 +7,8 @@ import (
 
 	actool "github.com/UnifyNook/Norma/tool"
 
-	"github.com/UnifyNook/Artex/agent"
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/agent"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 type toolUsageRecorder interface {

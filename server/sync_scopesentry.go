@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/mcphttp"
+	"github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/mcphttp"
 )
 
 // 资产同步（ScopeSentry 数据源）。

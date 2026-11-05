@@ -3,8 +3,8 @@ package server
 import (
 	"time"
 
-	"github.com/UnifyNook/Artex/agent"
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/agent"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // 重试策略的服务端解析，见 docs/LLM重试设计.md。五层里：

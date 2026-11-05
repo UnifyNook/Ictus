@@ -11,9 +11,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/UnifyNook/Artex/agent"
-	"github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/intercept"
+	"github.com/UnifyNook/Ictus/agent"
+	"github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/intercept"
 	"github.com/UnifyNook/Norma/harness"
 	"github.com/UnifyNook/Norma/llm"
 	"github.com/jackc/pgx/v5/pgconn"

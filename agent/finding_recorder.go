@@ -3,7 +3,7 @@ package agent
 import (
 	"context"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // FindingRecorder is injected by the host; agents never synthesize or copy

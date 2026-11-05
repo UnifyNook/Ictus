@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/sidequestion"
+	"github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/sidequestion"
 	"github.com/UnifyNook/Norma/llm"
 	"github.com/UnifyNook/Norma/transcript"
 )

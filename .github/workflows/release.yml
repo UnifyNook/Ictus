@@ -147,7 +147,7 @@ jobs:
       - uses: docker/metadata-action@v5
         id: meta
         with:
-          images: ghcr.io/unifynook/artex
+          images: ghcr.io/unifynook/ictus
           tags: |
             type=ref,event=tag
             type=raw,value=latest

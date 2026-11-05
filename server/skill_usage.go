@@ -10,8 +10,8 @@ import (
 	"github.com/UnifyNook/Norma/skill"
 	actool "github.com/UnifyNook/Norma/tool"
 
-	"github.com/UnifyNook/Artex/agent"
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/agent"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // maxLedgerSkillName caps the skill name stored for a MISS — that string comes

@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // Input bundles what the report needs.

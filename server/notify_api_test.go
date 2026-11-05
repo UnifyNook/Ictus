@@ -13,8 +13,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/notify"
+	"github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/notify"
 )
 
 // 本文件覆盖推送功能的端到端行为：漏洞落库 → 事件 → 分派 → 真发 HTTP。

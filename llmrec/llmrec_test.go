@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 	"github.com/UnifyNook/Norma/llm"
 	"github.com/UnifyNook/Norma/transcript"
 	"github.com/google/uuid"

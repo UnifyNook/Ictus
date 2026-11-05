@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/UnifyNook/Artex/agent"
-	pgdb "github.com/UnifyNook/Artex/db"
-	"github.com/UnifyNook/Artex/traffic"
+	"github.com/UnifyNook/Ictus/agent"
+	pgdb "github.com/UnifyNook/Ictus/db"
+	"github.com/UnifyNook/Ictus/traffic"
 )
 
 const taskArchivePollInterval = 2 * time.Second

@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // TestChatUnavailableReasonDistinguishesStates pins the operator-facing message

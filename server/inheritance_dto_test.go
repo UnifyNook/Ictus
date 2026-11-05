@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 func TestInheritedDTOProvenance(t *testing.T) {

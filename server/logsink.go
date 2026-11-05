@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // LogLine is one captured backend log entry exposed by the /api/logs endpoints.

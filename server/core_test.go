@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 // newTestServer 构造带完整生命周期的测试 Server：t.Cleanup 中先取消 ctx、

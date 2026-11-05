@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/UnifyNook/Artex/agent"
-	"github.com/UnifyNook/Artex/db"
+	"github.com/UnifyNook/Ictus/agent"
+	"github.com/UnifyNook/Ictus/db"
 )
 
 func newAdmissionTestServer(m *Manager, available func(*Task) bool) *Server {
